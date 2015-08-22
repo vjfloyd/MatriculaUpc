@@ -1,4 +1,19 @@
+<<<<<<< HEAD
 /MatriculaUpcCore/target/
 /MatriculaUpcWeb/target/
 /MatriculaUpcWeb/Puzzle8/nbproject/private/
 /MatriculaUpcWeb/Puzzle8/build/
+=======
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+>>>>>>> ee5c7ff8bd199661fcc8074f87fd4ef3503489fe
