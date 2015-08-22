@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      >
+    <h:head>
+        <style type="text/css">
+            .foo td{
+                vertical-align: top;
+                
+            }
+            .foo>tbody>tr>td{
+                vertical-align: top;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h:panelGrid columns="2" style="width: 100%">
+            <h1 style="margin: 0; padding: 0">Matricula en Línea</h1>
+            
+            <h:outputLabel value="Estado: #{cLogin.alumno.estado}"></h:outputLabel>
+            <em>Permite realizar la matricula de cursos</em>
+        </h:panelGrid>
+    <br/>
+    
+        <h:form id="form">
+            <p:growl id="msgs" showDetail="true"/>
+                <h:panelGrid columns="6" style="width: 100%">
+                    
+                </h:panelGrid>
+            
+        
+        
+        </h:form>
+        
+    </h:body>
+</html>

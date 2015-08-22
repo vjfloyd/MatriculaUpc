@@ -42,9 +42,9 @@ public class Matricula implements Serializable {
     @Column(name = "fecha")
     @Temporal(TemporalType.DATE)
     private Date fecha;
-    @JoinColumn(name = "idCurso", referencedColumnName = "idalumno")
+    @JoinColumn(name = "idalumno", referencedColumnName = "idalumno")
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
-    private Alumno idCurso;
+    private Alumno idalumno;
     @JoinColumn(name = "idhorario", referencedColumnName = "idhorario")
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private Horario idhorario;
@@ -72,12 +72,12 @@ public class Matricula implements Serializable {
         this.fecha = fecha;
     }
 
-    public Alumno getIdCurso() {
-        return idCurso;
+    public Alumno getIdalumno() {
+        return idalumno;
     }
 
-    public void setIdCurso(Alumno idCurso) {
-        this.idCurso = idCurso;
+    public void setIdalumno(Alumno idalumno) {
+        this.idalumno = idalumno;
     }
 
     public Horario getIdhorario() {

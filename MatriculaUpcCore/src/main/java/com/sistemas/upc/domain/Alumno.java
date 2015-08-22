@@ -67,7 +67,7 @@ public class Alumno implements Serializable {
     private String ciclo;
     @Column(name = "tipoIngreso")
     private String tipoIngreso;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idCurso", fetch = FetchType.LAZY)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idalumno", fetch = FetchType.LAZY)
     private List<Matricula> matriculaList;
 
     public Alumno() {

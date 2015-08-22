@@ -7,8 +7,7 @@
 package com.sistemas.upc.repository;
 
 import com.sistemas.upc.domain.Alumno;
-import com.sistemas.upc.domain.Curso;
-import com.sistemas.upc.repository.custom.CursoRepositoryCustom;
+import com.sistemas.upc.repository.custom.AlumnoRepositoryCustom;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -18,6 +17,7 @@ import org.springframework.stereotype.Repository;
  * @author vjrojasb
  */
 @Repository
-public interface CursoRepository extends JpaRepository<Curso, Integer> , CursoRepositoryCustom{
+public interface AlumnoRepository extends JpaRepository<Alumno, Integer>, AlumnoRepositoryCustom{
     
+    List<Alumno> findByCodigoAndClave(String codigo, String password); 
 }

@@ -14,7 +14,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
  *
  * @author vjrojasb
  */
-public class CursoCustomImpl implements CursoRepositoryCustom{
+public class CursoRepositoryImpl implements CursoRepositoryCustom{
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
