@@ -8,6 +8,7 @@ package com.sistemas.upc.test;
 
 import com.sistemas.upc.domain.Alumno;
 import com.sistemas.upc.repository.AlumnoRepository;
+import java.util.List;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,18 +26,33 @@ public class AlumnoTest {
     @Autowired
     private AlumnoRepository alumnoRepository;
     
+//    @Test
+//    public void Prueba(){
+//        try {
+//            Alumno al = new Alumno();
+//            al.setNombre("vj");
+//            alumnoRepository.save(al);
+//        
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        
+//        
+//    }
+//    
+    
     @Test
-    public void Prueba(){
+    public void Prueba2(){
         try {
-            Alumno al = new Alumno();
-            al.setNombre("vj");
-            alumnoRepository.save(al);
-        
+            List<Alumno>  al = alumnoRepository.findByCodigoAndClave("2199", "1234");
+            if (!al.isEmpty()) {
+                Alumno al2 =  new Alumno();
+                al2.setNombre("Perrojo");
+                alumnoRepository.save(al2);
+            }
+                    
         } catch (Exception e) {
-            e.printStackTrace();
         }
-        
-        
     }
     
 }

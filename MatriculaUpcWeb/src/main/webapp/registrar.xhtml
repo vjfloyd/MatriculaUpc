@@ -19,7 +19,7 @@
         </style>
     </h:head>
     <h:body>
-        <h:panelGrid columns="2" style="width: 100%">
+      <h:panelGrid columns="2" style="width: 100%">
             <h1 style="margin: 0; padding: 0">Matricula en Línea</h1>
             
             <h:outputLabel value="Estado: #{cLogin.alumno.estado}"></h:outputLabel>
@@ -30,11 +30,17 @@
         <h:form id="form">
             <p:growl id="msgs" showDetail="true"/>
                 <h:panelGrid columns="6" style="width: 100%">
-                    
-                </h:panelGrid>
-            
-        
-        
+                        <h:outputLabel value="Alumno: "></h:outputLabel>
+                        <h:outputLabel value="#{cLogin.alumno.codigo} - #{cLogin.alumno.nombre} "></h:outputLabel>
+                        <h:outputLabel value="Ciclo: "></h:outputLabel>
+                        <h:outputLabel value="#{cLogin.alumno.ciclo}"></h:outputLabel>                    
+                        <h:outputLabel value="Tipo de ingreso: "></h:outputLabel>             
+                        <h:outputLabel value="#{cLogin.alumno.tipoIngreso}"></h:outputLabel>
+                        <h:outputLabel value="Nivel: "></h:outputLabel>
+                        <h:outputLabel value="#{cLogin.alumno.nivel}"></h:outputLabel>
+                        <h:outputLabel value="Turno: "></h:outputLabel>
+                       
+            </h:panelGrid>      
         </h:form>
         
     </h:body>

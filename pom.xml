@@ -9,5 +9,6 @@
   <modules>
     <module>MatriculaUpcCore</module>
     <module>MatriculaUpcWeb</module>
+    <module>FFF</module>
   </modules>
 </project>

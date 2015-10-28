@@ -6,7 +6,7 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:p="http://primefaces.org/ui">
-      >
+      
 
     <h:head>
         <title>Start Page</title>
@@ -21,7 +21,7 @@
                     <p:outputLabel value="Usuario"/>
                     <p:inputText id="alu_cod" value="#{cLogin.codigo}"/>
                     <p:outputLabel value="Contrasena"/>
-                    <p:password id="alu_pass" value=" #{cLogin.password}"/>
+                    <p:password id="alu_pass" value="#{cLogin.password}"/>
                     <p:outputLabel value=""/>
                     <p:commandButton id="btnLogin" value="Entrar" action="#{cLogin.autenticar}" update="growl" oncomplete="" />
                 </h:panelGrid>

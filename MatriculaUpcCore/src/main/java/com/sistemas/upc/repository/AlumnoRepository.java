@@ -20,4 +20,5 @@ import org.springframework.stereotype.Repository;
 public interface AlumnoRepository extends JpaRepository<Alumno, Integer>, AlumnoRepositoryCustom{
     
     List<Alumno> findByCodigoAndClave(String codigo, String password); 
+    
 }

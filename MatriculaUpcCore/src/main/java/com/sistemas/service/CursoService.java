@@ -6,16 +6,15 @@
 
 package com.sistemas.service;
 
-import com.sistemas.upc.domain.Alumno;
-import com.sistemas.upc.service.base.BaseService;
+import com.sistemas.upc.domain.Curso;
 import com.sistemas.upc.util.SystemException;
-import java.io.Serializable;
+import java.util.List;
 
 /**
  *
  * @author vjrojasb
  */
-public interface AlumnoService extends BaseService<Alumno, Serializable>{
+public interface CursoService {
     
-    Alumno buscarAlumno(String codigo, String password) throws SystemException;
+    List<Curso> listaCursos() throws SystemException;
 }

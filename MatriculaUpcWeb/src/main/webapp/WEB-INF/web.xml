@@ -6,9 +6,10 @@
     <param-value>server</param-value>
   </context-param>
   
+  <!--Todo lo que esta configurado dentro de "spring-config" es cargado, cuando levanta la aplicacion -->
   <context-param>
     <param-name>javax.faces.application.CONFIG_FILES</param-name>
-    <param-value>/WEB-INF/faces-config.xml</param-value>
+    <param-value>/WEB-INF/spring-config/*.xml</param-value>
   </context-param>
   
   <context-param>

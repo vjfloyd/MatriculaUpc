@@ -10,10 +10,11 @@ package com.sistemas.upc.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
-import pe.edu.upc.demo.domain.Alumno;
-import pe.edu.upc.demo.service.AlumnoService;
+import com.sistemas.upc.domain.Alumno;
+import com.sistemas.service.AlumnoService;
 
 /**
  *
@@ -29,13 +30,14 @@ public class LoginController extends BaseController{
     
     private static final Logger LOGGER = LoggerFactory.getLogger(LoginController.class);
     
+    @Autowired
     private AlumnoService alumnoService;
     
     public String autenticar(){
         try {
             alumno = alumnoService.buscarAlumno(codigo, password);
             if ( alumno != null ) {
-                return "registrarx";
+                return "registrar";
             }else{
                 LOGGER.info("Credenciales invalidas");
                 addMessage("Credenciales invalidas");

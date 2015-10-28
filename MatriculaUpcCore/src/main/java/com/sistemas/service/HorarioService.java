@@ -6,16 +6,16 @@
 
 package com.sistemas.service;
 
-import com.sistemas.upc.domain.Alumno;
-import com.sistemas.upc.service.base.BaseService;
+import com.sistemas.upc.domain.Curso;
 import com.sistemas.upc.util.SystemException;
-import java.io.Serializable;
+import java.util.List;
+import pe.edu.upc.bean.HorarioBean;
 
 /**
  *
  * @author vjrojasb
  */
-public interface AlumnoService extends BaseService<Alumno, Serializable>{
+public interface HorarioService {
     
-    Alumno buscarAlumno(String codigo, String password) throws SystemException;
+    List<HorarioBean> listarHorarios(Curso curso) throws SystemException;
 }
